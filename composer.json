@@ -1,0 +1,13 @@
+{
+    "name": "vivekratkalkar/twilio_php_starter",
+    "authors": [
+        {
+            "name": "Vivek Ratkalkar",
+            "email": "vratkalkar@live.com"
+        }
+    ],
+    "require": {
+        "twilio/sdk": "^5.16",
+        "vlucas/phpdotenv": "^2.4"
+    }
+}

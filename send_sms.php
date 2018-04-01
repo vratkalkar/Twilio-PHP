@@ -1,6 +1,7 @@
 <?php
 require __DIR__ . '/vendor/autoload.php';
 use Twilio\Rest\Client;
+use Twilio\Twiml;
 $dotenv = new Dotenv\Dotenv(__DIR__);
 $dotenv->load();
 
@@ -15,8 +16,7 @@ $twilio_number = getenv('twilio_number');
 $client = new Client($account_sid, $auth_token);
 $client->messages->create(
     // SMS recipient number
-    //getenv('recipient_number'),
-    $argv[1],
+    getenv('recipient_number'),
     array(
         'from' => $twilio_number,
         'body' => "A message from Vivek via Twilio's PHP SDK: https://www.twilio.com",
